@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://gitlab.com/stalking-dragons/minecraft/astral-core"
+logoFile="icon.png"
+credits="Developed by Stalking Dragons"
+description='''Astral Core is the magic-systems library for the Majestic mod ecosystem: an essence resource, a spell/ability casting framework, a multiblock ritual engine, a knowledge/research graph and a relic behaviour framework (bridged to Regalia Slots API). It ships no concrete content — mods and datapacks build on its API. Part of the Majestic ecosystem.'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="regalia_slots_api"
+    type="required"
+    ordering="AFTER"
+    side="BOTH"
+
+# common_toolkit is added here in a later milestone, once its 1.21.1 Maven coordinates are
+# pinned. Stays external (never bundled).
